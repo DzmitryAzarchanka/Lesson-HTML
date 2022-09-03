@@ -1,0 +1,141 @@
+<!-- <!DOCTYPE html> - Инструкция для браузера, которая говорит, что в этом документе находится html файл -->
+<!DOCTYPE html>
+<!-- Тег <link>                  - Начало HTML файла
+     Значение атрибута lang "en" - Указание языка -->
+<html lang="en">
+  <!-- Тег <head> - Часть не видимая пользователю -->
+  <head>
+    <!-- Значение атрибута content "UTF-8" - Кодировка для этого файла. -->
+    <meta charset="UTF-8" />
+    <!-- Значение атрибута name "viewport"              - указывается,где показывать веб стр..
+         Значение атрибута content "width=device-width" - показывать веб сайт по всей ширине экрана -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Тег <title> - Задается название страницы -->
+    <title>Azarchanka Dzmitry</title>
+    <!-- Тег <link>   - Задается ссылка к файлу (ссылка на библиотеку Bootstrap с различными стилями) -->
+    <!-- Атрибут href - Здесь указывается ссылка на файл с стилями -->
+    <!-- Атрибут rel  - задается отношение между внешним документом и нашим документом (Набор стилей CSS) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Добавление иконки во вкладке -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- Тег <style> - Создание нового стиля -->
+    <style>
+      /* Название стиля (начинается с точки) */
+      .img-rounded {
+        /* Ширина изображения от ширины родительского элемента (колонка) */
+        width: 60%;
+        /* Угл скругления изображения 45 градусов */
+        border-radius: 50%;
+        /* Добавление тени */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        /* Добавление внутреннего отступа для тени */
+        padding: 0.6em;
+        /* Добавление отступа снизу */
+        margin-bottom: 1em;
+      }
+    </style>
+  </head>
+  <!-- Тег <body> - Часть видимая пользователю -->
+  <body>
+    <!-- Добавление навигационного пространства
+         Тег <nav> - навигация по веб странице
+         Значение атрибута class "navbar-dark" - Цвет шрифта изменяется на белый
+         Значение атрибута class "bg-dark"     - Цвет навигационного пространства изменяется на черный -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <!-- Значение атрибута class "navbar-brand" - Логотип в навигационном пространстве
+             Значение атрибута class "p-0" - отступ логотипа свергу и снизу. Мы его убрали.
+             Значение атрибута href "/" - ссылка на корневую страницу веб сайта -->
+        <a class="navbar-brand p-0" href="/">
+          <!-- Значение атрибута src "logo.png" - Ссылка на логотип для навигационного пространства
+               Значение атрибута width "40"     - Размер логотипа в пикселях -->
+          <img src="logo.png" alt="Logo" width="40" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- Тег <ul> - Создание списка -->
+          <ul class="navbar-nav">
+            <!-- Тег <li> - Создание элемента списка -->
+            <li class="nav-item">
+              <!-- Значение атрибута class "active" - Делает кнопку активной, подсвечивая её -->
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <!-- Значение атрибута href "places.html" - Ссылка на вторую страницу нашего сайта -->
+              <a class="nav-link" href="places.html">Favorite places</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Подключение классов из библиотеки стилей Bootstrap,
+         Значение атрибута class "container"  - создает область, в который мы поместили наши элементы
+         Значение атрибута class "text-centr" - содержимое контейнера станет по его центру и текст будет иметь выравнивание по цетру 
+         Значение атрибута class="my-5" - Задается отступ по оси Y сверху и снизу -->
+    <div class="container text-center my-5">
+      <!-- Значение атрибута class "row" - добавляет строку в контейнер, который теперь можно разделить на колонки, а также автоматические отступы слева и справа. -->
+      <div class="row">
+        <!-- Значение атрибута class "coll-lg-6" - Задает ширину колонки на 50% от родительского контейнера. Значение может быть от 1 до 12 т.к. контейнер из библиотеки Bootstrap делится на 12 частей. Еще текст теперь не занимает всю ширину контейнера. Для отображения на мониторах.
+             Значение атрибута class "coll-md-8" - Задает ширину колонки на 66% от родительского контейнера. Значение может быть от 1 до 12 т.к. контейнер из библиотеки Bootstrap делится на 12 частей. Еще текст теперь не занимает всю ширину контейнера. Для отображения на планшетах.
+             Значение атрибута class "mx-auto"   - Автоматический отступ по ос X слева и справа для заданной колонки внутри контейнера. Теперь колонка находится по центру контейнера. -->
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <!-- Тег <img>                       - Добавление изображения и альтернативного текста, при невозможности его открыть
+               Значение атрибута src "img.jpg" - Задает путь до нужного файла с изображением
+               Значение атрибута alt "Dmitry"  - Задает альтернативный текста, при невозможности открытия изображения
+               Значение атрибута class "img-rounded" - Стиль который мы создали, теперь задан изображению -->
+          <img class="img-rounded" src="img.jpg" alt="Dmitry" />
+          <!-- Тег <h1> - Заголовок 1
+               Значение атрибута class "fw-light" - Толщина шрифта в заголовке стала меньше -->
+          <h1 class="fw-light">Azarchanka Dzmitry</h1>
+          <!-- Тег <h1>                             - Блок текста
+               Значение атрибута class "lead"       - Размер шрифта в блоке текста стал больше
+               Значение атрибута class "text-muted" - Прозрачность шрифта в блоке текста стала больше -->
+          <p class="lead text-muted">
+            I am excited to teach you software development. In this HTML course
+            you will build your personal website
+          </p>
+          <!-- Тег <a>                                              - добавление ссылки на сайт
+               Значение атрибута href "https://vk.com/zelenyi_slon" - Задается ссылка
+               Значение атрибута target "_blank"                    - Теперь веб страница по ссылке открывается в новом окне, а не в том же -->
+          <a href="https://vk.com/zelenyi_slon" target="_blank">
+            <!-- Тег <button>                          - Кнопка с надписью на ней
+                 Значение атрибута class "btn"         - Кнопка получила форму заданную стилем
+                 Значение атрибута class "btn-primary" - Кнопка получила цвет (синий) заданный стилем -->
+            <button class="btn btn-primary">My VK</button>
+          </a>
+          <!-- Ссылка стилизованная под кнопку -->
+          <a
+            href="https://www.youtube.com/channel/UCZ1PTHBNh9mA_1MxkkshbRQ/featured"
+            target="_blank"
+            class="btn btn-danger"
+          >
+            My YouTube
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
